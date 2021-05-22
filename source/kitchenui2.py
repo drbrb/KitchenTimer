@@ -65,8 +65,19 @@ class Ui_MainWindow(object):
         self.label.setFont(font)
         self.egg_4 = QPushButton(self.centralwidget)
         self.egg_4.setObjectName(u"egg_4")
-        self.egg_4.setGeometry(QRect(10, 60, 171, 34))
+        self.egg_4.setGeometry(QRect(10, 60, 112, 34))
         self.egg_4.setFont(font)
+
+        self.egg_3 = QPushButton(self.centralwidget)
+        self.egg_3.setObjectName(u"egg_3")
+        self.egg_3.setGeometry(QRect(130, 60, 112, 34))
+        self.egg_3.setFont(font)
+
+        self.reset_timer_1 = QPushButton(self.centralwidget)
+        self.reset_timer_1.setObjectName(u"reset_timer_1")
+        self.reset_timer_1.setGeometry(QRect(250, 60, 112, 34))
+        self.reset_timer_1.setFont(font)
+
         self.timer_view_2 = QLabel(self.centralwidget)
         self.timer_view_2.setObjectName(u"timer_view_2")
         self.timer_view_2.setGeometry(QRect(680, 10, 111, 31))
@@ -149,6 +160,10 @@ class Ui_MainWindow(object):
         self.egg_4.setText(QCoreApplication.translate("MainWindow",
                                                       f"{self.dict_cfg_v['but5_n'].encode('cp1251').decode('utf8')} {self.dict_cfg_v['but5_m']} \u043c\u0438\u043d",
                                                       None))
+
+
+        self.egg_3.setText(QCoreApplication.translate("MainWindow", f"{self.dict_cfg_v['but7_n'].encode('cp1251').decode('utf8')} {self.dict_cfg_v['but7_m']} \u043c\u0438\u043d", None))
+        self.reset_timer_1.setText(QCoreApplication.translate("MainWindow", f"{self.dict_cfg_v['but8_n'].encode('cp1251').decode('utf8')} {self.dict_cfg_v['but8_m']} \u043c\u0438\u043d", None))
 
         # self.tea_12.setText(QCoreApplication.translate("MainWindow", u"\u0427\u0430\u0439 12 \u043c\u0438\u043d", None))
         # self.tea_15.setText(QCoreApplication.translate("MainWindow", u"\u0427\u0430\u0439 15 \u043c\u0438\u043d", None))

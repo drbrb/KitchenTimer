@@ -22,6 +22,8 @@ class KitchenTimer(QtWidgets.QMainWindow, kitchenui2.Ui_MainWindow):
         self.makaron_8.clicked.connect(lambda: self.Start_T(self.dict_cfg['but3_m'], self.dict_cfg['but3_n']))
         self.duh_40.clicked.connect(lambda: self.Start_T(self.dict_cfg['but4_m'], self.dict_cfg['but4_n']))
         self.egg_4.clicked.connect(lambda: self.Start_T(self.dict_cfg['but5_m'], self.dict_cfg['but5_n']))
+        self.egg_3.clicked.connect(lambda: self.Start_T(self.dict_cfg['but7_m'], self.dict_cfg['but7_n']))
+        self.reset_timer_1.clicked.connect(lambda: self.Reset_T())
         # self.tea_12.clicked.connect(lambda: self.Start_T('12', 'чай'))
         # self.tea_15.clicked.connect(lambda: self.Start_T('15', 'чай'))
         # self.makaron_8.clicked.connect(lambda: self.Start_T('8', 'макароны'))
