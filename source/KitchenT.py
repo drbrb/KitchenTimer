@@ -14,6 +14,7 @@ class KitchenTimer(QtWidgets.QMainWindow, kitchenui2.Ui_MainWindow):
         with open('g:\\project\\exe\\config.yaml', 'r') as ymlfile:
             cfg = yaml.load(ymlfile)
         self.dict_cfg = cfg['buttons']
+        self.timer = None
         # self.but1_name = 'чай'
         # self.but1_min = '15'
         self.tea_12.clicked.connect(lambda: self.Start_T(self.dict_cfg['but1_m'], self.dict_cfg['but1_n']))
@@ -32,6 +33,7 @@ class KitchenTimer(QtWidgets.QMainWindow, kitchenui2.Ui_MainWindow):
     def Start_T(self, time_min, text_view):
         global count
         count = 0
+        self.Reset_T()
         ##self.start_timer()
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.showTime)
@@ -44,7 +46,8 @@ class KitchenTimer(QtWidgets.QMainWindow, kitchenui2.Ui_MainWindow):
 
     def Reset_T(self):
         self.timer_view_2.setText('00:00:00')
-        self.timer.stop()
+        if self.timer:
+            self.timer.stop()
 
     def start_timer(self):
         self.timer()
